@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e94acc13a3c4e92b1a7891759f399f, type: 3}
+  m_Name: MainUIData
+  m_EditorClassIdentifier: 
+  commonColor: <color=white>
+  rareColor: <color=#00BFFF>
+  mythicColor: <color=#D015FF>
+  legendaryColor: <color=red>
+  commonCell: {fileID: -1218866046, guid: b14badfcb1a90e043a24e491637b8e00, type: 3}
+  rareCell: {fileID: 426839331, guid: b14badfcb1a90e043a24e491637b8e00, type: 3}
+  mythicCell: {fileID: -11211912, guid: b14badfcb1a90e043a24e491637b8e00, type: 3}
+  legendaryCell: {fileID: 2049819571, guid: b14badfcb1a90e043a24e491637b8e00, type: 3}
+  commonShopCell: {fileID: 688193078, guid: f3b10854aad03a747b10c08a1af7bc73, type: 3}
+  rareShopCell: {fileID: -352725728, guid: f3b10854aad03a747b10c08a1af7bc73, type: 3}
+  mythicShopCell: {fileID: 1221271404, guid: 246b994e6eb9ab742aafe318b440b971, type: 3}
+  legendaryShopCell: {fileID: -761621944, guid: f3b10854aad03a747b10c08a1af7bc73, type: 3}
+  mainManager: {fileID: 0}
+  itemManager: {fileID: 0}
+  eventManager: {fileID: 0}
+  uiobject: {fileID: 0}
+  magnetSpeed: 15
