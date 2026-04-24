@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca8352f57c3b1148846234e1d47235f, type: 3}
+  m_Name: RoomInfo
+  m_EditorClassIdentifier: 
+  startRoom: {fileID: 8798466402358594819, guid: 904ac08586e58ea45883d337e3b21c65, type: 3}
+  publicRooms:
+  - {fileID: 8798466402358594819, guid: f503a9a2bafb2264caeaa8a619795edd, type: 3}
+  - {fileID: 8798466402358594819, guid: a51087fd8e491b84299cbe0394c679fb, type: 3}
+  - {fileID: 8798466402358594819, guid: 67f8fab6363e5a74c95205637edc7ce8, type: 3}
+  publicCorridorsVertical:
+  - {fileID: 8798466402358594819, guid: 45df7ec0179fd894b8b8bd6963208bf2, type: 3}
+  publicCorridorsHorizontal:
+  - {fileID: 8798466402358594819, guid: 45df7ec0179fd894b8b8bd6963208bf2, type: 3}
+  roomLimit: 500
+  roomLimitMin: 20
+  farFromSpawn: 6
+  enemyCampsCount: 4
+  roomSpawnChance: 0.7
+  rareRoomChance: 0.1
+  mythicRoomChance: 0
+  legendaryRoomChance: 0
+  skeleton: {fileID: 5258594605797218768, guid: 1c44ac3dd3dbd704fbfd727b320ffed0, type: 3}
+  spiders: {fileID: 5258594605797218768, guid: 1c44ac3dd3dbd704fbfd727b320ffed0, type: 3}
+  EasyRoomSpawnersCount: 2
+  MediumRoomSpawnersCount: 4
+  HardRoomSpawnersCount: 6
+  InsaneRoomSpawnersCount: 8
+  mediumChance: 0.3
+  hardChance: 0.2
+  insaneChance: 0.05
+  classicChest: {fileID: 1409170583233453793, guid: 05bc0bf468e8417408a9d90fe184b010, type: 3}
+  classicShopCenter: {fileID: 7229520374229621874, guid: 6a52c24dc75ca304086c1423527313ce, type: 3}

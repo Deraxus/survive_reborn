@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee8175625f0ad34a951d648b3b5d55a, type: 3}
+  m_Name: BronzeChest
+  m_EditorClassIdentifier: 
+  rare: 0
+  LootCommon:
+  - {fileID: 308529205213446334, guid: ec4e2f09cd5a5d040a4b66de9d8ed5fd, type: 3}
+  LootRare:
+  - {fileID: 308529205213446334, guid: ec4e2f09cd5a5d040a4b66de9d8ed5fd, type: 3}
