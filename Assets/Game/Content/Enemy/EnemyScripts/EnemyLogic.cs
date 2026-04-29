@@ -208,9 +208,10 @@ public class EnemyLogic : MonoBehaviour
             isAttack = true;
             //GetComponent<AIPath>().canMove = false;
             yield return new WaitForSeconds(0.5f);
-            Quaternion smth = new Quaternion(0, 0, 0, 0);
             Vector3 position = pos.transform.position;
-            Instantiate(damageCloud, position, smth).GetComponentInChildren<DamageCloudLogic>().damage = damage;
+            GameObject damageCloudSpawned = Instantiate(damageCloud, position, new Quaternion(0, 0, 0, 0)); 
+            damageCloudSpawned.GetComponentInChildren<DamageCloudLogic>().damage = damage;
+            damageCloudSpawned.GetComponentInChildren<DamageCloudLogic>().parentEnemy = gameObject;
             yield return new WaitForSeconds(0.35f);
             isAttack = false;
             isMoving = true;

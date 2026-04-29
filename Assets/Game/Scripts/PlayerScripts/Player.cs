@@ -57,7 +57,8 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void GetDamage(int damage) {
+    public void GetDamage(int damage)
+    {
         HP -= damage;
     }
 

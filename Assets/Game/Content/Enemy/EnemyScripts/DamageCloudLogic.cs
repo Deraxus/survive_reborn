@@ -5,6 +5,7 @@ using UnityEngine;
 public class DamageCloudLogic : MonoBehaviour
 {
     public float damage;
+    public GameObject parentEnemy;
 
     private float seconds;
     void Start()
@@ -23,8 +24,9 @@ public class DamageCloudLogic : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player") {
-            collision.gameObject.GetComponent<Player>().HP -= damage;
+        if (collision.gameObject.name == "Player")
+        {
+            EventManager.Instance.OnPlayerDamaged(gameObject, damage);
             Destroy(gameObject);
             Debug.Log(1);
         }

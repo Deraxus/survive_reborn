@@ -227,6 +227,5 @@ public class WaveManager : MonoBehaviour
     }
 
     void TestFunc() {
-        Debug.Log("ЋќЎј–ј!");
     }
 }

@@ -3,7 +3,11 @@ using UnityEngine;
 
 public class PlayerIFrames : MonoBehaviour
 {
+    public GameObject visualPartBody;
     public float iframesDuration = 3f;
+    
+    public bool iframesNow = false;
+    public float timer = 0f;
     void Start()
     {
         EventManager.Instance.OnPlayerDamagedEvent += OnPlayerDamaged;
@@ -12,11 +16,28 @@ public class PlayerIFrames : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        timer += Time.deltaTime;
     }
 
     void OnPlayerDamaged(GameObject enemy, float damage = 0)
     {
-        
+        print($"damage by {enemy.name}");
+        if (!iframesNow)
+        {
+            StartCoroutine(StartIFrames(enemy, damage));   
+        }
+    }
+    
+    IEnumerator StartIFrames(GameObject enemy, float damage = 0)
+    {
+        Player.Instance.GetDamage((int)damage);
+        timer = 0f;
+        iframesNow = true;
+        while (timer < iframesDuration)
+        {
+            visualPartBody.SetActive(!visualPartBody.activeInHierarchy);
+            yield return new WaitForSeconds(0.25f);
+        }
+        iframesNow = false;
     }
 }
