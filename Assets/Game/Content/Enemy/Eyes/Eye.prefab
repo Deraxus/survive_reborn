@@ -575,7 +575,6 @@ GameObject:
   - component: {fileID: 8842204524043103192}
   - component: {fileID: 1227189522076989865}
   - component: {fileID: 9137442136813597452}
-  - component: {fileID: 2287213592807964965}
   - component: {fileID: 7720250737818024923}
   - component: {fileID: 4509173912896982147}
   - component: {fileID: 1079125054875334223}
@@ -748,34 +747,12 @@ MonoBehaviour:
   detectObject: {fileID: 4665953286996640464}
   homeObject: {fileID: 0}
   attackState: {fileID: 4509173912896982147}
-  patrolState: {fileID: 2287213592807964965}
+  patrolState: {fileID: 0}
   returningState: {fileID: 0}
   IsDead: 0
   IsBlock: 0
   isAttack: 0
   isMoving: 1
---- !u!114 &2287213592807964965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6085217094237026059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2a7dc93be038264b8349b6c40237970, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentState: 0
-  localTimer: 0
-  patrolTime: 5
-  randomPatrolKf: 5
-  idleTime: 2
-  speed: 1
-  randomSpeedKf: 5
-  physKf: 1
-  direction: 0
-  vector: {x: 0, y: 0}
 --- !u!114 &7720250737818024923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -837,10 +814,10 @@ MonoBehaviour:
   readyToMeleeAttack: 0
   readyToNotMeleeAttack: 0
   isAttacking: 0
-  rangeForAttack: 10
+  rangeForAttack: 8
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1280
 --- !u!50 &1079125054875334223
 Rigidbody2D:
   serializedVersion: 5
@@ -1000,7 +977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  uniqueID: 3820131935446160712
+  uniqueID: 4603201638017077088
   updateError: 1
   checkTime: 0.05
 --- !u!114 &2215355952302248027
@@ -1018,7 +995,7 @@ MonoBehaviour:
   attackType: 1
   pos: {fileID: 0}
   damage: 3
-  cooldown: 0
+  cooldown: 5
   attackSounds:
   - {fileID: 8300000, guid: f9cb0f76d2f79bc4c93de91a3c89934c, type: 3}
   currentAttackSound: {fileID: 0}
@@ -1032,7 +1009,7 @@ MonoBehaviour:
   startLaser: {fileID: 0}
   midLaser: {fileID: 0}
   endLaser: {fileID: 0}
-  laserDistance: 0
+  laserDistance: 5
 --- !u!1 &6950102435523429493
 GameObject:
   m_ObjectHideFlags: 0

@@ -241,5 +241,6 @@ public class EnemyLogic : MonoBehaviour
         currentEnemyState?.Exit();
         currentEnemyState = enemyState;
         currentEnemyState.Enter();
+        print($"Меняю фазу на {enemyState.GetType().Name}");
     }
 }

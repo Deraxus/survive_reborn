@@ -1,10 +1,9 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class CellClick : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+public class ShopCellClick : MonoBehaviour
 {
     public float needHoldingTime = 0.5f;   
     
@@ -34,7 +33,7 @@ public class CellClick : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
             if (eventData.pointerEnter != null && eventData.pointerEnter.GetComponent<CellData>().data.itemName == "Empty")
             {
                 print("52352355252525252");
-                ResetCell(eventData.pointerEnter);
+                ResetCell();
             }
             
         }
@@ -42,7 +41,7 @@ public class CellClick : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (eventData.pointerEnter.CompareTag("inventoryCell"))
+        if ((eventData.pointerEnter.CompareTag("inventoryCell") || (eventData.pointerEnter.CompareTag("inventoryCell"))))
         {
             if (eventData.pointerEnter.GetComponent<CellData>().data.itemName != "Empty")
             {            
@@ -50,30 +49,21 @@ public class CellClick : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
                 isOnCell = true;  
             }
         }
-        else if (eventData.pointerEnter.CompareTag("shopCell"))
-        {
-            lastEventData = eventData;
-            isOnCell = true;  
-        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         if ((eventData.pointerEnter.CompareTag("inventoryCell") || (eventData.pointerEnter.CompareTag("inventoryCell"))))
         {
-            ResetCell(eventData.pointerEnter);
-        }
-        else if (eventData.pointerEnter.CompareTag("shopCell"))
-        {
-            ResetCell(eventData.pointerEnter);
+            ResetCell();
         }
     }
 
-    public void ResetCell(GameObject cell = null)
+    public void ResetCell()
     {
         UIManager.Instance.cellPanelObject.SetActive(false);
         timer = 0;
-        isOnCell = false;            
+        isOnCell = false;
     }
     private void Update()
     {

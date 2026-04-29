@@ -10,8 +10,11 @@ public class ItemBuying : MonoBehaviour
 
     EventManager localEventManager;
 
+    public static ItemBuying Instance;
+
     void Start()
     {
+        Instance = this;
         if (mainUI == null) {
             mainUI = GameObject.Find("UIObject");
         }

@@ -15,6 +15,7 @@ public class EventManager : MonoBehaviour
     public delegate void OnEnemyDamageDelegate(GameObject enemy, float damage = 0);
     public delegate void OnEnemyDiedDelegate(GameObject enemy);
     public delegate void OnItemBuyingDelegate(GameObject item);
+    public delegate void OnPlayerDamagedDelegate(GameObject enemy, float damage = 0);
     public delegate void OnEverySecDelegate();
     public delegate void OnEveryMicSecDelegate();
     public delegate void OnActivateKeyPressedDelegate();
@@ -53,6 +54,9 @@ public class EventManager : MonoBehaviour
     // Событие вызывается при выстреле.
     // Передаёт объект пули.
     public event OnShootDelegate OnShootEvent;
+    
+    // Событие вызывается когда игрок получает урон.
+    public event OnPlayerDamagedDelegate OnPlayerDamagedEvent;
 
     public GameObject mainManager;
 
@@ -139,6 +143,11 @@ public class EventManager : MonoBehaviour
     public void OnShoot(GameObject bullet)
     {
         OnShootEvent?.Invoke(bullet);
+    }
+
+    public void OnPlayerDamaged(GameObject enemy, float damage = 0)
+    {
+        OnPlayerDamagedEvent?.Invoke(enemy, damage);
     }
 
 

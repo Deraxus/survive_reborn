@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eca8352f57c3b1148846234e1d47235f, type: 3}
   m_Name: RoomInfo
   m_EditorClassIdentifier: 
+  escapeBlock: {fileID: 2169046320347268467, guid: c5833e637ff80b0428946b6b8d1206a9, type: 3}
   startRoom: {fileID: 8798466402358594819, guid: 904ac08586e58ea45883d337e3b21c65, type: 3}
   publicRooms:
   - {fileID: 8798466402358594819, guid: f503a9a2bafb2264caeaa8a619795edd, type: 3}
@@ -23,7 +24,7 @@ MonoBehaviour:
   - {fileID: 8798466402358594819, guid: 45df7ec0179fd894b8b8bd6963208bf2, type: 3}
   roomLimit: 500
   roomLimitMin: 20
-  farFromSpawn: 6
+  farFromSpawn: 4
   enemyCampsCount: 4
   roomSpawnChance: 0.7
   rareRoomChance: 0.1

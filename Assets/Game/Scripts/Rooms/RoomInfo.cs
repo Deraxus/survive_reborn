@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RoomInfo : MonoBehaviour
 {
+    public GameObject centreBlock;
+    
     public RoomUtils.RoomTypes roomType = RoomUtils.RoomTypes.defaultRoom;
     public RoomUtils.CampDifficults campDifficult;
     public RoomUtils.CampFillings campFilling;
@@ -11,7 +13,7 @@ public class RoomInfo : MonoBehaviour
 
     public Utils.RareTypes roomRare = Utils.RareTypes.common;
 
-    [Tooltip("Если галочка стоит - спаунеры врагов будут там же, где и сундуки")]
+    [Tooltip("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ, пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ")]
     public bool ChestSpawnersAreEnemySpawners;
 
     public int spawnersCount;
@@ -41,7 +43,7 @@ public class RoomInfo : MonoBehaviour
 
     public bool canSpawn = false;
 
-    // Является ли комната боковой. Нужна для заполнения уровня
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     public bool sideRoom = false;
 
     // Update is called once per frame
@@ -140,10 +142,10 @@ public class RoomInfo : MonoBehaviour
         }
     }
 
-    // Метод вызывается после полного построения комнаты
+    // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     public void AfterFullSpawn()
     {
         FillAllSpawners();
-        Debug.Log("методы");
+        Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅ");
     }
 }
