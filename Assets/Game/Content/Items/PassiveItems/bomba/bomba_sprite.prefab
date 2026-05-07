@@ -157,7 +157,7 @@ MonoBehaviour:
   rareType: 0
   itemType: 0
   mainItemScript: {fileID: 3889971518663202991}
-  shopPrice: 30
+  shopPrice: 40
   canBeRepeatAnyway: 0
   dropCountMin: 1
   dropCountMax: 1
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   publicExplosion: {fileID: 4041390640573993530, guid: caa0197ad8fe0e349b912aefd3f141ed, type: 3}
   startExplosionDamage: 20
-  explosionChance: 0.1
+  explosionChance: 0.15
 --- !u!114 &6423417844995805643
 MonoBehaviour:
   m_ObjectHideFlags: 0

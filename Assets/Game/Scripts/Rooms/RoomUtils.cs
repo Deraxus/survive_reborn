@@ -47,9 +47,9 @@ public static class RoomUtils
                     break;
             }
             room.GetComponent<RoomInfo>().campFilling = RoomUtils.GetRandomCampFillings<RoomUtils.CampFillings>();
-            // ДОДЕЛАТЬ
-            // Разобраться в скрипте нахождения случайного элемента в Enum, сделать так, чтобы система пропускала в enum категорию NoEnum (по возможности)
-            // Начать разрабатывать методы, которые будут заполнять комнату по нужному шаблону
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ Enum, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ enum пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ NoEnum (пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ)
+            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         }
     }
 
@@ -113,24 +113,24 @@ public static class RoomUtils
     public static List<GameObject> SelectRoomPool(List<GameObject> roomList, int roomSelectCount, bool selectAgain = false)
     {
         //roomSelectCount -= 1;
-        // Не знаю почему, но метод выдает на 1 комнату больше чем положено, поэтому пока колхозное решение
+        // пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ 1 пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         List<GameObject> localRoomList = new List<GameObject>(roomList);
-        Debug.Log($"Выборка перед махинациями - {localRoomList.Count}");
+        Debug.Log($"пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - {localRoomList.Count}");
         for (int i = localRoomList.Count - 1; i >= 0; i--)
         {
             if (localRoomList[i].GetComponent<RoomInfo>().roomType != RoomUtils.RoomTypes.unknown)
             {
-                Debug.Log($"Тип комнаты известен! Айди {i}");
+                Debug.Log($"пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅ {i}");
                 localRoomList.RemoveAt(i);
             }
         }
-        Debug.Log($"Начинаю работу с комнатами, текущая выборка - {localRoomList.Count}");
+        Debug.Log($"пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ - {localRoomList.Count}");
 
         List<GameObject> returnedRooms = new List<GameObject>();
         GameObject selectedRoom;
         for (int i = roomSelectCount - 1; i >= 0; i--)
         {
-            Debug.Log($"После удаления объекта длина массива стала {localRoomList.Count}");
+            Debug.Log($"пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ {localRoomList.Count}");
             selectedRoom = localRoomList[UnityEngine.Random.Range(0, localRoomList.Count)];
             returnedRooms.Add(selectedRoom);
             if (selectAgain == false)
@@ -220,12 +220,12 @@ public static class RoomUtils
         return UnityEngine.Random.Range(min, max);
     }
 
-    // Метод заполняет одну из сторон нужными блоками.
-    // Задача - сделать так, чтобы генератор выделял свободное место рандомно, оставлял место для корридоров в случайных местах, а все остальное заполнял блоками
-    // Что уже готово - метод заполняет верхнюю сторону белыми и черными блоками рандомно.
-    // Что нужно сделать - довести до ума верхнюю сторону, сделать так, чтобы система раскидывала блоки по нужным сеткам, а не лепила все в одну
+    // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
+    // пїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    // пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
+    // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ
 
-    // ПРОБЛЕМА: заполнитель плохо работает с нестандартными позициями точек коридоров. Если расставлять их не в формате коробки - все немного сыпется. Исправить
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     public static SRoomAfterData FillRoomSide(GameObject room, RoomSide roomSide, SRoomTilesData tilesData, SRoomAfterData roomAfterData = null)
     {
         bool willCloseSide = false;
@@ -264,11 +264,11 @@ public static class RoomUtils
         Vector2 leftCorridorTopPoint = currentRoomInfo.leftCorridorTopPoint;
         Vector2 leftCorridorBotPoint = currentRoomInfo.leftCorridorBotPoint;
 
-        // Работа со стороной сверху
+        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         int blocksCount = 0;
         int randPos = 0;
 
-        // Блок, в котором генератор выбирает, сколько блоков будет в проеме, а также с какой позиции начинать
+        // пїЅпїЅпїЅпїЅ, пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         switch (roomSide)
         {
             case RoomSide.top:
@@ -282,7 +282,7 @@ public static class RoomUtils
                     Debug.Log($"231 {topRange}");
                     topRange = Mathf.Max(localRoomAfterInfo.minimumDoorSizeVert, topRange);
                     blocksCount = Random.Range(localRoomAfterInfo.minimumDoorSizeVert, topRange);
-                    // Везде было * 2 / 3 как в примере ниже
+                    // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ * 2 / 3 пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
                     //blocksCount = Random.Range(6, (int)(topCorridorRightPoint.x - topCorridorLeftPoint.x - 1) * 2 / 3);
                 }
                 randPos = Random.Range((int)room.GetComponent<RoomInfo>().topCorridorLeftPoint.x + 1, (int)room.GetComponent<RoomInfo>().topCorridorRightPoint.x - blocksCount);
@@ -331,7 +331,7 @@ public static class RoomUtils
                 break;
 
 
-                // Подравниваем позиции и количество блоков - потому что в 1 плитке всегда 2 тайла
+                // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ 1 пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ 2 пїЅпїЅпїЅпїЅпїЅ
         }
         //  && (roomSide == RoomSide.top || roomSide == RoomSide.bot)
         if ((randPos % 2 != 0) && (roomSide == RoomSide.right || roomSide == RoomSide.left))
@@ -354,7 +354,7 @@ public static class RoomUtils
             willCloseSide = true;
         }
 
-        // Сохраняем информацию о том, сколько блоков будет в этом проеме
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         switch (roomSide)
         {
             case RoomSide.top:
@@ -377,20 +377,20 @@ public static class RoomUtils
             randPos++;
         }*/
 
-        // Заполняем пустышками, здесь будет коридор
-        // Заполняем сторону блоками, полом и пустотой где нужно
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         for (int i = 0; i < blocksCount; i++)
         {
             switch (roomSide)
             {
                 case RoomSide.top:
-                    // Заполнение блока
-                    // Проверяем, что не улетели за границы коридора
+                    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+                    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
                     if (randPos >= topCorridorLeftPoint.x && randPos <= topCorridorRightPoint.x)
                     {
                         localTilemap.SetTile(new Vector3Int(randPos, (int)topCorridorLeftPoint.y), null);
 
-                        // Заполняем пол
+                        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
                         for (int j = 0; j < 7; j++)
                         {
                             if (j % 2 != 0)
@@ -415,26 +415,26 @@ public static class RoomUtils
                                     polTilemap.SetTile(new Vector3Int(randPos, (int)(topCorridorLeftPoint.y - j)), tilesData.classicPol2);
                                 }
                             }
-                            // Все подобные конструкции ниже - удаление блоков, чтобы игрок 100% мог пройти по полу
+                            // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ 100% пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ
                             localTilemap.SetTile(new Vector3Int(randPos, (int)(topCorridorLeftPoint.y - j)), null);
                         }
                         if (i == blocksCount / 2 + 1)
                         {
                             GameObject localEndBlock = room.transform.Find("endblock_top").gameObject;
 
-                            // Если нужно полностью автоматическая растановка - но тут есть проблемы с координатой y
+                            // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ y
                             //localEndBlock.transform.localPosition = new Vector2((float) (randPos - 1) / 2f, (int)(topCorridorLeftPoint.y) / 2);
                             localEndBlock.transform.localPosition = new Vector2((float)(randPos - 1) / 2f, localEndBlock.transform.localPosition.y);
                             localRoomAfterInfo.endblock_top = localEndBlock;
 
-                            // Колхозный вариант, в будущем изменить если надо
+                            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
                             if (localRoomAfterInfo.roomDirectionFromTo == DirectionType.noDirection)
                             {
-                                GameObject.Instantiate(tilesData.startGameBlock, new Vector2(localEndBlock.transform.position.x, localEndBlock.transform.position.y + 18), new Quaternion(0, 0, 0, 0));
-                                GameObject.Instantiate(tilesData.startGameBlock, new Vector2(localEndBlock.transform.position.x - 1, localEndBlock.transform.position.y + 18), new Quaternion(0, 0, 0, 0));
-                                GameObject.Instantiate(tilesData.startGameBlock, new Vector2(localEndBlock.transform.position.x - 2, localEndBlock.transform.position.y + 18), new Quaternion(0, 0, 0, 0));
-                                GameObject.Instantiate(tilesData.startGameBlock, new Vector2(localEndBlock.transform.position.x + 2, localEndBlock.transform.position.y + 18), new Quaternion(0, 0, 0, 0));
-                                GameObject.Instantiate(tilesData.startGameBlock, new Vector2(localEndBlock.transform.position.x + 1, localEndBlock.transform.position.y + 18), new Quaternion(0, 0, 0, 0));
+                                GameObject.Instantiate(tilesData.startGameBlock, new Vector2(localEndBlock.transform.position.x, localEndBlock.transform.position.y + 18), new Quaternion(0, 0, 0, 0)).transform.parent = room.transform;
+                                GameObject.Instantiate(tilesData.startGameBlock, new Vector2(localEndBlock.transform.position.x - 1, localEndBlock.transform.position.y + 18), new Quaternion(0, 0, 0, 0)).transform.parent = room.transform;
+                                GameObject.Instantiate(tilesData.startGameBlock, new Vector2(localEndBlock.transform.position.x - 2, localEndBlock.transform.position.y + 18), new Quaternion(0, 0, 0, 0)).transform.parent = room.transform;
+                                GameObject.Instantiate(tilesData.startGameBlock, new Vector2(localEndBlock.transform.position.x + 2, localEndBlock.transform.position.y + 18), new Quaternion(0, 0, 0, 0)).transform.parent = room.transform;
+                                GameObject.Instantiate(tilesData.startGameBlock, new Vector2(localEndBlock.transform.position.x + 1, localEndBlock.transform.position.y + 18), new Quaternion(0, 0, 0, 0)).transform.parent = room.transform;
                             }
 
                         }
@@ -463,7 +463,7 @@ public static class RoomUtils
                             localRoomAfterInfo.endblock_right = localEndBlock;
                         }
 
-                        // Заполнение пола
+                        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
                     }
                     break;
                 case RoomSide.bot:
@@ -515,7 +515,7 @@ public static class RoomUtils
             }
             exceptedPos.Add(randPos);
             randPos++;
-            Debug.Log($"Сделал тайл! {localTilemap}");
+            Debug.Log($"пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ! {localTilemap}");
         }
 
         switch (roomSide)
@@ -530,7 +530,7 @@ public static class RoomUtils
                     polTilemap.SetTile(new Vector3Int((int)rightCorridorTopPoint.x, randPos - 5), tilesData.perPolStartFirst4);
                     polTilemap.SetTile(new Vector3Int((int)rightCorridorTopPoint.x, randPos - 6), tilesData.perPolStartFirst5);
 
-                    // Удаляем блоки, чтобы уж наверняка можно было пройти
+                    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
                     localTilemap.SetTile(new Vector3Int((int)rightCorridorTopPoint.x, randPos - 1), null);
                     localTilemap.SetTile(new Vector3Int((int)rightCorridorTopPoint.x, randPos - 2), null);
                     localTilemap.SetTile(new Vector3Int((int)rightCorridorTopPoint.x, randPos - 3), null);
@@ -549,7 +549,7 @@ public static class RoomUtils
                     polTilemap.SetTile(new Vector3Int((int)leftCorridorTopPoint.x, randPos - 5), tilesData.perPolStartSecond4);
                     polTilemap.SetTile(new Vector3Int((int)leftCorridorTopPoint.x, randPos - 6), tilesData.perPolStartSecond5);
 
-                    // Удаляем блоки, чтобы уж наверняка можно было пройти
+                    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
                     localTilemap.SetTile(new Vector3Int((int)leftCorridorTopPoint.x, randPos - 1), null);
                     localTilemap.SetTile(new Vector3Int((int)leftCorridorTopPoint.x, randPos - 2), null);
                     localTilemap.SetTile(new Vector3Int((int)leftCorridorTopPoint.x, randPos - 3), null);
@@ -566,7 +566,7 @@ public static class RoomUtils
         switch (roomSide)
         {
             case RoomSide.top:
-                // Докидываем обычных блоков туда, где нет пустышек
+                // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
                 for (int x = (int)topCorridorLeftPoint.x + 1; x < topCorridorRightPoint.x; x++)
                 {
                     if (!exceptedPos.Contains(x) || willCloseSide)
@@ -594,7 +594,7 @@ public static class RoomUtils
                             polTilemap.SetTile(new Vector3Int(x, (int)topCorridorLeftPoint.y - 6), tilesData.perPolMidSecond5);
                         }
                     }
-                    else // Работаем со спаунерами. Пыатемся удалить те, в которые тяжело попасть из-за удаленного проема
+                    else // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ, пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
                     {
                         foreach (GameObject spawner in allSpawners)
                         {
@@ -606,8 +606,8 @@ public static class RoomUtils
                     }
                 }
 
-                // Если текущую на текущей стороне у нас будет полная стенка - возвращаем все отключенные спаунеры
-                // Подобный прикол со спаунерами пока работает только на верхней стороне. В будущем можно расширить и сделать на других сторонах
+                // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+                // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
                 if (blocksCount == 0)
                 {
                     allSpawners = TechUtils.GetAllChilds(room.transform.Find("RoomSpawners").gameObject, false, false);
@@ -636,7 +636,7 @@ public static class RoomUtils
                             localTilemap.SetTile(new Vector3Int((int)rightCorridorTopPoint.x, y), tilesData.rightWallSecond);
                         }
                     }
-                    else // Работаем со спаунерами. Пыатемся удалить те, в которые тяжело попасть из-за удаленного проема
+                    else // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ, пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
                     {
                         foreach (GameObject spawner in allSpawners)
                         {
@@ -677,7 +677,7 @@ public static class RoomUtils
                         }
                     }
 
-                    else // Работаем со спаунерами. Пыатемся удалить те, в которые тяжело попасть из-за удаленного проема
+                    else // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ, пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
                     {
                         foreach (GameObject spawner in allSpawners)
                         {
@@ -720,7 +720,7 @@ public static class RoomUtils
                         }
                     }
 
-                    else // Работаем со спаунерами. Пыатемся удалить те, в которые тяжело попасть из-за удаленного проема
+                    else // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ, пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
                     {
                         foreach (GameObject spawner in allSpawners)
                         {
@@ -758,7 +758,7 @@ public static class RoomUtils
             }
         }
 
-        // Тотальная зачистка - убрать артефакты в конце
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ
         for (int x = (int)bottomCorridorLeftPoint.x; x <= (int)bottomCorridorRightPoint.x; x++)
         {
             for (int y = (int)bottomCorridorLeftPoint.y - 1; y >= (int)bottomCorridorLeftPoint.y - 6; y--)
@@ -792,7 +792,7 @@ public static class RoomUtils
 
         localRoomAfterInfo.roomDirectionFromTo = directionFromTo;
 
-        // Значит это первая комната, она всегда статична
+        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         if (directionFromTo == DirectionType.noDirection)
         {
             localRoomAfterInfo = FillRoomSide(room, RoomSide.top, tilesData, localRoomAfterInfo);
@@ -859,8 +859,8 @@ public static class RoomUtils
             corridorSize++;
         }
 
-        // Делаем так, чтобы плиток всегда было четное кол-во (можно и без этого, но будет чуть запарнее)
-        // Если делать петли - нужно отказываться от такого варика
+        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ (пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ)
+        // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         /*if ((corridorSize / 2) % 2 == 0)
         {
             corridorSize += 2;
@@ -873,7 +873,7 @@ public static class RoomUtils
             case DirectionType.fromBotToTop:
             case DirectionType.fromTopToBot:
 
-                // Сюда влепим лимит блоки и постараемся растянуть fullRoom
+                // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ fullRoom
                 pos0 = new Vector2(-1, corridorSize + 1);
                 pos1 = new Vector2(doorSize + 3, corridorSize + 1);
                 pos2 = new Vector2(doorSize + 3, -1);
@@ -882,7 +882,7 @@ public static class RoomUtils
                 endBlockBotPos = new Vector2((float)doorSize / 4f + 0.5f, 0.5f);
                 endBlockTopPos = new Vector2((float)doorSize / 4f + 0.5f, corridorSize / 2 - 0.5f);
 
-                // Стремные формулы, в будущем возможно нужно будет опять подтягивать значения
+                // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
                 //corridor.transform.Find("Grid").Find("limit_block_3").transform.localPosition = new Vector2(1, -1);
                 //corridor.transform.Find("Grid").Find("limit_block_2").transform.localPosition = new Vector2(doorSize / 2 + 0.75f, -1);
 
@@ -893,7 +893,7 @@ public static class RoomUtils
 
                 corridor.transform.Find("FullRoom").transform.localScale = new Vector2(doorSize / 2 + 0.5f, corridorSize / 2 - 1.25f);
 
-                // Подравниваем FullRoom
+                // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ FullRoom
                 if ((doorSize / 2) % 2 == 0)
                 {
                     if ((corridorSize / 2) % 2 == 1)
@@ -961,7 +961,7 @@ public static class RoomUtils
                 corridor.transform.Find("endblock_bot").transform.localPosition = endBlockBotPos;
                 corridor.transform.Find("endblock_top").transform.localPosition = endBlockTopPos;
 
-                Debug.Log($"Тест {localCorridorAfterInfo.endblock_bot} {corridor.transform.Find("endblock_bot").gameObject}");
+                Debug.Log($"пїЅпїЅпїЅпїЅ {localCorridorAfterInfo.endblock_bot} {corridor.transform.Find("endblock_bot").gameObject}");
 
                 localCorridorAfterInfo.endblock_bot = corridor.transform.Find("endblock_bot").gameObject;
                 localCorridorAfterInfo.endblock_top = corridor.transform.Find("endblock_top").gameObject;
@@ -971,7 +971,7 @@ public static class RoomUtils
             case DirectionType.fromLeftToRight:
             case DirectionType.fromRightToLeft:
 
-                // Сюда влепим лимит блоки и постараемся растянуть fullRoom
+                // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ fullRoom
                 pos0 = new Vector2(-1, corridorSize + 1);
                 pos1 = new Vector2(doorSize + 3, corridorSize + 1);
                 pos2 = new Vector2(doorSize + 3, -1);
@@ -988,8 +988,8 @@ public static class RoomUtils
                 corridor.transform.Find("FullRoom").transform.localScale = new Vector2(corridorSize / 2 - 1.25f, doorSize / 2 + 0.75f);
                 corridor.transform.Find("FullRoom").transform.localPosition = new Vector2((corridorSize) / 4 + 0.5f, doorSize / 4 + 0.5f);
 
-                // Подравниваем FullRoom
-                // Нужны доработки - еще 2 доп случая, также для коридора сверху-вниз
+                // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ FullRoom
+                // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅ 2 пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ-пїЅпїЅпїЅпїЅ
                 if ((doorSize / 2) % 2 == 0)
                 {
                     if ((corridorSize / 2) % 2 == 1)
@@ -1168,7 +1168,7 @@ public static class RoomUtils
         return availableCommonRooms[Random.Range(0, availableCommonRooms.Count)];
     }
 
-    // Метод проверяет, является ли комната крайней (как в айзеке комнаты босса и сокровищницы
+    // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     public static bool CheckSideRoom(GameObject room)
     {
         List<GameObject> endblocksList = new List<GameObject>();
@@ -1198,11 +1198,11 @@ public static class RoomUtils
             if (localRayHit.collider != null)
                 Debug.Log($"Hit {localRayHit.collider.name}, distance = {localRayHit.distance}");
             else
-                Debug.Log("Ничего не задел");
+                Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ");
         }
         else
         {
-            Debug.Log($"Комната не имеет эндблока сверху! 400");
+            Debug.Log($"пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ! 400");
         }
 
         if (endblock_right != null)
@@ -1261,10 +1261,10 @@ public static class RoomUtils
 
         if (trueCount > 1)
         {
-            Debug.Log($"трушек {trueCount}");
+            Debug.Log($"пїЅпїЅпїЅпїЅпїЅпїЅ {trueCount}");
             return false;
         }
-        Debug.Log($"трушек {trueCount}");
+        Debug.Log($"пїЅпїЅпїЅпїЅпїЅпїЅ {trueCount}");
         return true;
 
 

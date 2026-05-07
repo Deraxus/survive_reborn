@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
-    public GameObject mainManager;
+    [HideInInspector] public GameObject mainManager;
     public SWeaponStats data;
 
     

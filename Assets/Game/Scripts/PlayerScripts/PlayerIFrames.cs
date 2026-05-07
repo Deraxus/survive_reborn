@@ -30,13 +30,22 @@ public class PlayerIFrames : MonoBehaviour
     
     IEnumerator StartIFrames(GameObject enemy, float damage = 0)
     {
+        SpriteRenderer[] spriteRenderers;
+        spriteRenderers = visualPartBody.GetComponentsInChildren<SpriteRenderer>();
         Player.Instance.GetDamage((int)damage);
         timer = 0f;
         iframesNow = true;
         while (timer < iframesDuration)
         {
-            visualPartBody.SetActive(!visualPartBody.activeInHierarchy);
+            foreach (SpriteRenderer localSr in spriteRenderers)
+            {
+                localSr.enabled = !localSr.enabled;
+            }
             yield return new WaitForSeconds(0.25f);
+        }
+        foreach (SpriteRenderer localSr in spriteRenderers)
+        {
+            localSr.enabled = true;
         }
         iframesNow = false;
     }

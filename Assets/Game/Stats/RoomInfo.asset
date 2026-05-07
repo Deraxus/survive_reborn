@@ -17,14 +17,15 @@ MonoBehaviour:
   publicRooms:
   - {fileID: 8798466402358594819, guid: f503a9a2bafb2264caeaa8a619795edd, type: 3}
   - {fileID: 8798466402358594819, guid: a51087fd8e491b84299cbe0394c679fb, type: 3}
+  - {fileID: 8798466402358594819, guid: f7627907857abab4cb1f71f539d19698, type: 3}
   - {fileID: 8798466402358594819, guid: 67f8fab6363e5a74c95205637edc7ce8, type: 3}
   publicCorridorsVertical:
   - {fileID: 8798466402358594819, guid: 45df7ec0179fd894b8b8bd6963208bf2, type: 3}
   publicCorridorsHorizontal:
   - {fileID: 8798466402358594819, guid: 45df7ec0179fd894b8b8bd6963208bf2, type: 3}
   roomLimit: 500
-  roomLimitMin: 20
-  farFromSpawn: 4
+  roomLimitMin: 15
+  farFromSpawn: 3
   enemyCampsCount: 4
   roomSpawnChance: 0.7
   rareRoomChance: 0.1

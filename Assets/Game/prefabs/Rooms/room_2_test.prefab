@@ -9859,7 +9859,7 @@ Tilemap:
   m_TileColorArray:
   - serializedVersion: 2
     m_RefCount: 1
-    m_Data: {r: 0.83149236, g: 0.5254804, b: 0.5923093, a: 1}
+    m_Data: {r: 0.72468215, g: 0.3805143, b: 0.46789324, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 0}

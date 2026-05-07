@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0196026d448621249a3aed37ffe13eb1, type: 3}
+  m_Name: megaBlasterStats
+  m_EditorClassIdentifier: Assembly-CSharp::SWeaponStats
+  bullet_damage: 30
+  patrons: 1
+  bulletSprite: {fileID: 511976074, guid: 85ae8e08ba6ad2e46bb3a682c75e2a41, type: 3}
+  reload_time: 3.5
+  rate: 0.5
+  bullet_speed: 20
+  bulletLiveTime: 2
+  weaponRecoil: 2
+  weaponCount: 1
+  xWeapon: 0.3
+  panelSprite: {fileID: 8547401359979135663, guid: 2f0d6ec5da2126a4391d10df6e84a293, type: 3}
+  shotSounds: []

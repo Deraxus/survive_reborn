@@ -1009,7 +1009,7 @@ MonoBehaviour:
   startLaser: {fileID: 0}
   midLaser: {fileID: 0}
   endLaser: {fileID: 0}
-  laserDistance: 5
+  laserDistance: 3
 --- !u!1 &6950102435523429493
 GameObject:
   m_ObjectHideFlags: 0

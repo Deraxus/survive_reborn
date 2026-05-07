@@ -7,12 +7,12 @@ public class WeaponStats : MonoBehaviour
     [SerializeField] public SWeaponStats data;
 
 
-    public float bullet_damage;
-    public int patrons;
+    [HideInInspector] public float bullet_damage;
+    [HideInInspector] public int patrons;
 
-    public float reload_time;
-    public float rate;
-    public float bullet_speed;
+    [HideInInspector] public float reload_time;
+    [HideInInspector] public float rate;
+    [HideInInspector] public float bullet_speed;
     // Start is called before the first frame update
     void Awake()
     {
